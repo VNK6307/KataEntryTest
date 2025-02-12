@@ -1,11 +1,9 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Spaces {
 
-    public static void deleteSpaces(char[] text) {
-        List<Character> textWithoutSpaces = new ArrayList<>();
-
+    public static ArrayList deleteSpaces(char[] text) {
+        ArrayList<Character> textWithoutSpaces = new ArrayList<>();
         for (int i = 0; i < text.length; i++) {
             textWithoutSpaces.add(text[i]);
             if (text[i] == ' ') {
@@ -19,6 +17,7 @@ public class Spaces {
                 }
             }
         }
-        System.out.println(textWithoutSpaces);
+
+        return textWithoutSpaces;
     }
 }

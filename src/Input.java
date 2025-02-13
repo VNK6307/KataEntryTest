@@ -5,7 +5,7 @@ public class Input {
         String targetText1 = "генрих играет! илюбитшколу 3";
         String targetText2 = "Я люблю джаву всем сердцем!";
 
-        String input = "Ввее-дно   три пробела";// ToDo
+        String input = "Ввее-дно   три пр+обела";// ToDo
         textModifier(input);
 
         input = "-Введено   дв -араза     по     пять   пробелов. ";
@@ -34,6 +34,10 @@ public class Input {
 
         ArrayList<Character> textChangedChars = Dash.changingPlaces(textWithoutSpaces);
         System.out.println("Текст с поменявшими места символами - " + textChangedChars);
+        System.out.println();// ToDo delete
+
+        ArrayList<Character> textWithoutPluses = Plus.deletePluses(textChangedChars);
+        System.out.println("Текст без плюсов - " + textWithoutPluses);
         System.out.println();// ToDo delete
 
 

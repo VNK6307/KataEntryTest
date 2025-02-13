@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Dash {
-    public static ArrayList<Character> changingPlaces(ArrayList<Character> textArray) {
+    public static ArrayList<Character> changePlaces(ArrayList<Character> textArray) {
         System.out.println("New text array before: " + textArray.size());// ToDo Delete
         if ((textArray.get(0) == '-') || (textArray.get(textArray.size() - 1) == '-')) {
             System.out.println("Невозможно поменять символы местами, так как символ '-' является первым или последним элементом строки.");

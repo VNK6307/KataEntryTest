@@ -5,10 +5,10 @@ public class Input {
         String targetText1 = "генрих играет! илюбитшколу 3";
         String targetText2 = "Я люблю джаву всем сердцем!";
 
-        String input = "Ввее-дно   три пр+обела";// ToDo
+        String input = "Ввее-дно   три пр+обела";// ToDo Переделать на ввод из консоли
         textModifier(input);
 
-        input = "-Введено   дв -араза     по     пять   пробелов. ";
+        input = "Введено   дв -араза     по     пять   пробелов.";
         textModifier(input);
 
         input = "генрих1  играет+2   л-июбит0школу";
@@ -19,11 +19,12 @@ public class Input {
     //    public static String textModifier() {// ToDo Переделать в String
     public static void textModifier(String text) {
 
-        char[] inputtedText = text.toCharArray();
+        char[] inputtedText = text.toCharArray();// ToDo Попробовать сразу в ArrayList
         System.out.println();
         System.out.println("Number of symbols in text: " + inputtedText.length);// ToDo delete
 
-        for (char c : inputtedText) {
+
+        for (char c : inputtedText) {// ToDo for each
             System.out.print(c + ", ");
         }
         System.out.println();// ToDo delete
@@ -32,7 +33,7 @@ public class Input {
         System.out.println("Текст без пробелов - " + textWithoutSpaces);
         System.out.println();// ToDo delete
 
-        ArrayList<Character> textChangedChars = Dash.changingPlaces(textWithoutSpaces);
+        ArrayList<Character> textChangedChars = Dash.changePlaces(textWithoutSpaces);
         System.out.println("Текст с поменявшими места символами - " + textChangedChars);
         System.out.println();// ToDo delete
 

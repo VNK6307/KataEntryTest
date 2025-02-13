@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Spaces {
 
-    public static ArrayList deleteSpaces(char[] text) {
+    public static ArrayList<Character> deleteSpaces(char[] text) {
         ArrayList<Character> textWithoutSpaces = new ArrayList<>();
         for (int i = 0; i < text.length; i++) {
             textWithoutSpaces.add(text[i]);
@@ -17,7 +17,6 @@ public class Spaces {
                 }
             }
         }
-
         return textWithoutSpaces;
     }
 }

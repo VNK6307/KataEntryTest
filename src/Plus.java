@@ -9,4 +9,4 @@ public class Plus {
         }
         return inputText;
     }
-}//class
+}

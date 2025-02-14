@@ -5,42 +5,49 @@ public class Input {
         String targetText1 = "генрих играет! илюбитшколу 3";
         String targetText2 = "Я люблю джаву всем сердцем!";
 
-        String input = "Ввее-дно   три пр+обела";// ToDo Переделать на ввод из консоли
-        textModifier(input);
+        String input = "Ввее-дно   три пр+обела";// ToDo Переделать на ввод из консоли  и добавить отображение введенного текста
+        String modifiedText = textModifier(input);
+        System.out.println("Текст после всех изменений:");
+        System.out.println("     " + modifiedText);
 
         input = "Введено   дв -араза     по     пять   пробелов.";
-        textModifier(input);
+        modifiedText = textModifier(input);
+        System.out.println("Текст после всех изменений:");
+        System.out.println("     " + modifiedText);
 
         input = "генрих1  играет+2   л-июбит0школу";
-        textModifier(input);
+        modifiedText = textModifier(input);
+        System.out.println("Текст после всех изменений:");
+        System.out.println("     " + modifiedText);
 
     }// main
 
-    //    public static String textModifier() {// ToDo Переделать в String
-    public static void textModifier(String text) {
+    public static String textModifier(String text) {
 
-        char[] inputtedText = text.toCharArray();// ToDo Попробовать сразу в ArrayList
+        char[] inputtedText = text.toCharArray();
         System.out.println();
-        System.out.println("Number of symbols in text: " + inputtedText.length);// ToDo delete
 
-
-        for (char c : inputtedText) {// ToDo for each
+        for (char c : inputtedText) {// ToDo delete
             System.out.print(c + ", ");
         }
-        System.out.println();// ToDo delete
+        System.out.println();// Todo delete
 
         ArrayList<Character> textWithoutSpaces = Spaces.deleteSpaces(inputtedText);
         System.out.println("Текст без пробелов - " + textWithoutSpaces);
-        System.out.println();// ToDo delete
 
         ArrayList<Character> textChangedChars = Dash.changePlaces(textWithoutSpaces);
         System.out.println("Текст с поменявшими места символами - " + textChangedChars);
-        System.out.println();// ToDo delete
 
         ArrayList<Character> textWithoutPluses = Plus.deletePluses(textChangedChars);
         System.out.println("Текст без плюсов - " + textWithoutPluses);
-        System.out.println();// ToDo delete
 
+        // ToDo StringBuilder. Заменить на массив, полученный после последнего преобразования.
+        StringBuilder builtText = new StringBuilder();
+        for (Character ch : textWithoutPluses) {
+            builtText.append(ch);
+        }
+
+        return builtText.toString();
 
     }
 

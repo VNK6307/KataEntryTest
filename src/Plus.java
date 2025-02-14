@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class Plus {
-    public static ArrayList<Character> deletePluses(ArrayList<Character> inputText) {
-        for (int i = 0; i < inputText.size(); i++) {
-            if (inputText.get(i) == '+') {
-                inputText.set(i, '!');
+    public static ArrayList<Character> deletePluses(ArrayList<Character> sourceArray) {
+        for (int i = 0; i < sourceArray.size(); i++) {
+            if (sourceArray.get(i) == '+') {
+                sourceArray.set(i, '!');
             }
         }
-        return inputText;
+        return sourceArray;
     }
 }
